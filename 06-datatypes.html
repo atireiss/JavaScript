@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+let enBuyukTamsayi = Number.MAX_SAFE_INTEGER;
+console.log(enBuyukTamsayi); // 9007199254740991
+
+console.log(enBuyukTamsayi + 5 == enBuyukTamsayi + 6); // hatali olarak true verdi
+// bu durumu duzeltmek icin BigInt kullanilir
+
+var testTamsayi =  5422453245323453245345n;
+console.log(testTamsayi);
+console.log(testTamsayi + 5n == testTamsayi + 6n)
+
+let k; // declaration = deger atamna yapmadan sadece degisken olusturma islemidir
+console.log(k); // undefined
+
+let x = 5; // Initialization = degiskene deger atama islemidir
+console.log(typeof(x)); // typeof ile number datatype sonucunu aldik
+
+</script>
+
+</body>
+</html>
