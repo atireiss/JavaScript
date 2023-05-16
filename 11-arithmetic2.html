@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        const s1 = 2022;
+        const s2 = 1980;
+
+        console.log('Yas: ' + s1 - s2); // NaN verir, cunku parantez icinde degil
+        console.log('Yas: ' + (s1 - s2)); // 42 verir
+
+        console.log(`Benim yasim ${s1-s2}'dir.`);
+
+        
+        const pi = 3;
+        const r = 3;
+        const alan = pi*r**2;
+        const cevre = 2*pi*r;
+        console.log(cevre, alan);
+        console.log('Cevre:' + cevre, 'Alan:' + alan); // cevre ve alanin arasinda , koyarak ard arda yazdirabiliriz.
+        console.log(`Cevre: ${cevre}, Alan: ${alan}`);
+
+        let a = 3, b = ++a, c = --a; // 3 4 3 yazdirir
+        console.log(a, b, c);
+        a += 5;
+        console.log(a);  // 8 yazdirir
+
+        var f = 3, g = f++, h = --f; // 3 3 3 yazdirir ++ -- nereye yazdigina gore degisir
+        console.log(f, g, h);
+        f += 5;
+        console.log(f);  // 8 yazdirir
+
+        const k = 123;
+        document.write("Birler basamagi:" + k%10); // document.write() direkt sayfaya yazar
+        
+        console.log(k); //Uncaught TypeError: Assignment to constant variable.
+
+        
+
+    </script>
+</body>
+</html>
