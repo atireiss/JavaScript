@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        let x = 50;
+        let y = 40;
+        let z = 10;
+
+        // ==, != operatorleri sadece datayi kontrol eder
+        // === !== operatorleri ise hem data hem de datatype kontrolu yapar
+
+        console.log(x==50);
+        console.log(x==45);
+        console.log(x===50);
+        console.log(x=="50"); // == datatype kontrolu yapmaz, sadece veriye bakar
+        console.log(x==="50");
+        console.log(x===50n); // false verir cunku 50 BigInt'tir
+        console.log(x>y);
+        console.log(x>"30"); // true verir, datatype kontrol etmez
+        console.log(x>"130");
+        console.log(x>"asdf"); // false, hata vermez, ama karsilastiramaz
+
+        let s2 = 'kus';
+        let s3 = 'kedi';
+        console.log(s2 || s3); //kus
+        console.log(s2 && s3); // false'u aradi, bulamayinca son degeri aldi kedi yazar
+
+        console.log("" || 0 || "asd" || undefined); // 1'i arar, asd'yi bir deger olarak gordugu icin asd yazar
+        console.log(12 && 0 && "asd" && undefined); // and false arar, ilk false 0 oldugu icin onu yazdirir
+
+    </script>
+</body>
+</html>
