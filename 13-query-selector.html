@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<nav class="menu"> <!-- HTML -->
+    <ul>
+        <li class="kutu" id="kutu1">Anasayfa</li>
+        <li class="kutu">Hakkimizda</li>
+        <li class="kutu">Iletisim</li>
+    </ul>
+</nav>
+
+    
+    <script> // JS
+
+        let menu1 = document.querySelector(".menu"); // nav elementini sectik
+        console.log(menu1);
+        
+        let sec = document.querySelector("#kutu1");
+        // id sadece tek bir elemana verilebilir
+        console.log(sec.innerText); // sec.innerText ile sadece anasayfa yazizisini aliriz
+
+        sec.innerText = "Merhaba"; // sec'in icinde ilk <li> var, innerText ile Ana Sayfa yazisini aldik,
+            // atama operatoru ile icerigini degistirdik
+
+        sec.innerText ="<b>Merhaba Dunya</b>"; // innertext tag'leri algilamaz
+        sec.innerHTML= "<b>Merhaba Dunya</b>" // calisir, text'i bold yapar
+
+        let hepsi = document.querySelectorAll(".kutu");
+        console.log(hepsi);
+
+    </script>
+</body>
+</html>
