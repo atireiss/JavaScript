@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- CSS -->
+<style>
+
+.pink{
+    background-color: pink;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+
+</style>
+
+
+</head> <!-- HTML -->
+<body>
+    
+
+<h1 id="baslik" class="name blue red">Merhaba</h1>
+
+
+
+    <script> // JS
+
+let stiller = document.querySelector("#baslik").classList; // h1 in classList'ini alip stiller degiskenine yukledik
+console.log(stiller); // name blue red
+
+stiller.add("pink"); // stiller variable uzerinden h1'e pink adinda yeni bir class ekledim
+
+document.querySelector("#baslik").classList.add("yellow"); // degisken olusturmadan querySelector uzerinden h1'e yellow adinda bir class ekledim
+// yellow class'i sonradan add'lendigi icin pink classini override etti
+
+document.querySelector("#baslik").classList.remove("yellow");
+// yellow class'i remove'layinca pink class'i tekrar aktif oldu
+
+    </script>
+</body>
+</html>
