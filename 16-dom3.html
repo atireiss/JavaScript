@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+</head>
+<body>
+    
+
+<input type="text" name="" id="txtName" value="Ali Can">
+<h2 id="mesaj"></h2>
+
+    <script>
+        //1- veriyi al
+        let isim = document.querySelector("#txtName").value; // Input gibi form elemanlarinda deger okumak icin value kullanilir
+        //2- veriyi degistirerek yazdir
+        document.querySelector("#mesaj").innerHTML = `Merhaba ${isim}` // Merhaba Ali Can
+
+
+    </script>
+</body>
+</html>
