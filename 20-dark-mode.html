@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode/Light Mode Switcher</title>
+    <!-- once dark mode style'ini tanimlayalim. ClassList kullanarak ekleme ve cikarma yapalim
+    Default light mode'dur-->
+
+    <style>
+      .darkMode {
+        background-color: black;
+        color: white;
+      }
+
+     
+    </style>
+  </head>
+  <body>
+
+    <input type="button" id="btnMod" value="Dark Mode" onclick="changeMode()" />
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Non doloribus
+      nesciunt delectus cum! Accusantium, incidunt. Asperiores incidunt
+      excepturi accusamus iusto voluptas alias rem, impedit distinctio qui esse
+      voluptatibus enim quae? Vero animi voluptas, numquam obcaecati aliquid
+      error sit omnis ipsa. Accusantium pariatur quo, voluptatem, veritatis
+      obcaecati sunt earum iste dolor saepe voluptatum a, suscipit totam cum
+      excepturi? Ex, eum debitis. Nesciunt dolore cupiditate eaque nihil, quasi
+      ratione sit. Omnis blanditiis cumque libero perferendis sapiente
+      praesentium voluptatibus ratione, molestias, recusandae, facilis
+      consectetur iusto corrupti maxime rem. Cupiditate necessitatibus omnis
+      ipsa laboriosam. Quos, illum temporibus! Nihil dolore dolorem nulla
+      placeat, adipisci quidem iusto vel consectetur voluptas mollitia vero?
+      Itaque incidunt nobis est! Accusamus minima ducimus minus voluptates
+      veritatis quam repudiandae dicta nulla?
+    </p>
+
+    <script>
+
+        let mod = "light"; // default olani mod degiskeninin icine yukledim. Degisiklikler bu degisken uzerinden yapilacak
+
+        function changeMode(){
+            
+            if(mod == "light"){
+                document.querySelector("body").classList.add("darkMode")
+                document.querySelector("#btnMod").value = "Light Mode";
+                mod = "dark"; // mod variable'inin default degerini degistirelim ki tekrar tikladigimizda else'e dussun
+            }else{
+                document.querySelector("body").classList.remove("darkMode");
+                document.querySelector("#btnMod").value = "Dark Mode";
+                mod = "light";
+            }
+
+        }
+
+    </script>
+  </body>
+</html>
