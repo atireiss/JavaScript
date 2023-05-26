@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<input type="radio" name="ortak" id="emekli" onchange="hesapla('e')"> <!-- parametre gonderecek sekilde yaptik -->
+
+<label for="emekli">Emekli</label>
+
+<br>
+
+<input type="radio" name="ortak" id="calisan" onchange="hesapla('c')">
+
+<label for="calisan">Calisan</label>
+
+<div id="sonuc"></div>
+
+    <script>
+// html'den parametre gelecegi icin, bu degeri karsilamaliyiz
+
+function hesapla(tip){ // tip degiskeni e veya c olur. 
+    //alert(tip); e veya c'nin secilip secilmedigini kontrol ettik
+    let maas = 20000; // ilk degeri biz belirledik, disaridan bir input girisi yok
+
+    maas = (tip == 'e') ? (maas * 0.90) : maas;
+    document.querySelector('#sonuc').innerHTML = `Maas = ${maas}`
+}
+
+
+
+    </script>
+</body>
+</html>
+<!--radio'larin name'leri ayni olursa bir butun olarak calisirlar-->
+<!-- ortak davranabilmeleri icin input'un id'si label'in for u ayni olmali -->
