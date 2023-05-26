@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <input type="number" name="" id="Gun">
+    <input type="button" id="" value="Day" onclick="hesapla()">
+    <div id="sonuc"></div>
+
+
+    <script>
+        function hesapla(){
+            let gunler = document.querySelector("#Gun").value;
+            gunler = Number(gunler);
+            
+            switch(gunler){
+
+                case 1:
+                document.querySelector("#sonuc").innerHTML = "Pazar"
+                break;
+
+                case 2:
+                document.querySelector("#sonuc").innerHTML = "Pazartesi"
+                break;
+                
+                case 3:
+                document.querySelector("#sonuc").innerHTML = "Sali"
+                break;
+
+                case 4:
+                document.querySelector("#sonuc").innerHTML = "Carsamba"
+                break;
+
+                case 5:
+                document.querySelector("#sonuc").innerHTML = "Persembe"
+                break;
+
+                case 6:
+                document.querySelector("#sonuc").innerHTML = "Cuma"
+                break;
+
+                case 7:
+                document.querySelector("#sonuc").innerHTML = "Cumartesi"
+                break;
+
+                default:
+                document.querySelector("#sonuc").innerHTML = "Hatali bir deger girdiniz"
+                break;
+
+            }
+        
+        }
+
+
+    </script>
+</body>
+</html>
