@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input type="text" name="" id="txtFiyat">
+<input type="button" value="Calculate" id="btnCal" onclick="calculate()">
+<div id="sonuc"></div>
+
+    <script>
+
+        function calculate(){
+            let fiyat = document.querySelector("#txtFiyat").value; // input'tan gelen fiyat bilgisini bir variable yukledik.
+            fiyat = Number(fiyat); // input'tan string gelme ihtimaline karsi number'a donustur
+
+            switch(true){
+
+                case(fiyat > 1500):
+                fiyat = fiyat * 0.85;
+                break;
+
+                case(fiyat > 1000):
+                fiyat = fiyat * 0.87;
+                break;
+
+                case(fiyat > 700):
+                fiyat = fiyat * 0.9;
+                break;
+
+                case(fiyat > 500):
+                fiyat = fiyat * 0.93;
+                break;
+
+                case(fiyat > 300):
+                fiyat = fiyat * 0.95;
+                break;
+                
+                default:
+                fiyat = fiyat * 0.98;
+                break;
+            }
+            document.querySelector("#sonuc").innerHTML = fiyat;
+
+        }
+
+
+    </script>
+</body>
+</html>
+
+
+<!-- /*  Switch Kalibi
+
+switch(){
+    case():
+    //calisacak kodlar
+    break;
+
+    case():
+    //calisacak kodlar
+    break;
+
+    case():
+    //calisacak kodlar
+    break;
+
+    default:
+    //calisacak kodlar
+}
+
+*/ -->
