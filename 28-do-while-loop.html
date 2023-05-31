@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+<button id="b1" onclick="topla()">Sayi girmeye baslayiniz</button>
+
+
+    <script>
+        function topla(){
+            let sayi; // prompt ile kullanicidan bir sayi alip bu degiskenin icine ekleyecegiz
+            let toplam = 0;
+        
+        do{
+
+            sayi = prompt("Sayi giriniz");
+           // sayi = Number(sayi); // number enter ve cancel'a basinca 0 uretir
+           sayi = parseInt(sayi); // NaN uretti
+            console.log(sayi);
+
+            toplam = toplam + sayi;
+
+        }while(sayi != 0);
+        
+       document.write("Toplam = " + toplam);
+        
+        }
+
+        
+
+
+        
+    </script>
+</body>
+</html>
