@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <input type="text" name="" id="txtSayi1" placeholder="Baslangici giriniz">
+    <input type="text" name="" id="txtSayi2" placeholder="Bitisi giriniz">
+    <button onclick="hesapla()">Hesapla</button>
+    <h1 id="sonuc"></h1>
+    
+    
+    
+        <script>
+            function hesapla(){
+                let sayi1 = document.querySelector("#txtSayi1").value;
+                let sayi2 = document.querySelector("#txtSayi2").value;
+                let toplam = 0; // kac tane 7 ile bolunen varsa, sonucu burada saklayacagiz
+                let temp = 0; // yer degistirme algoritmasi icin tanimladim
+    
+                sayi1 = Number(sayi1);
+                sayi2 = Number(sayi2);
+                 // console.log(sayi1, sayi2); sayi girmeden butona tiklaninca sayi1 ve sayi2 0 olarak yuklendiler
+
+                if(sayi2<sayi1){ //yer degistirme algoritmasi
+                    temp = sayi1;
+                    sayi1 = sayi2;
+                    sayi2 = temp;
+                }
+
+                if(sayi1 == 0 && sayi2 == 0){ // sifiri duzeltme algoritmasi
+                    alert("gecerli bir sayi giriniz")
+                    return; //bu if'e girerse kodun devami calismaz
+                }
+                
+
+                for(let i = sayi1 ; i <= sayi2 ; i++){
+                        //console.log(i);
+                    if(i % 7 == 0){
+                        toplam++;// 7 ye tam bolunen bir sayi geldiginde toplam degiskeni 1 artar
+                        // console.log(toplam); hangi sayilarin geldigini gorduk
+                       
+                    }
+
+                }
+                document.querySelector("#sonuc").innerHTML = toplam;
+            }
+
+        </script>
+
+</body>
+</html>
