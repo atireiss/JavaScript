@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+      function yasHesapla1(){
+
+        console.log(`Benim yasim ${2023-1996}`);
+
+      }// bir function'i cagirmazsaniz calismaz
+
+      yasHesapla1(); // function'i cagirdik
+      yasHesapla1(); // 2 defa veya daha fazla cagirabiliriz
+
+
+      function yasHesapla2(dogumTarihi){ //parametre alabilecek
+       
+        console.log(`Benim yasim ${2023 - dogumTarihi}`);
+
+      }
+
+      yasHesapla2(1995); // olusturdugumuz fonksiyonu 2 defa parametre ile cagirdik
+      yasHesapla2(); // icine parametre yazmayinca NaN verir
+
+      function yasHesapla3(dogumTarihi){
+        let yas = 2023 - dogumTarihi;
+        return yas; // cagirildigi yere yasi dondurur
+      }
+      
+      let yas = yasHesapla3(2005);
+      alert(`Yas: ${yas}`);
+
+
+    function yasHesapla4(dogumTarihi){ // bulundugumuz yil otomatik gelsin
+
+        let tarih = new Date();
+        let year = tarih.getFullYear();
+        let yas2 = year - dogumTarihi;
+        return yas2; // bu fonksiyonun cagirildigi yere return ettigi deger yas2'dir
+    }
+
+    let yas2 = yasHesapla4(2000);
+    alert(`Yas: ${yas2}`);
+
+    // bir function sadece 1 is yapmali, icini cok doldurmanin anlami yok
+    // bir function elden geldigince hicbir yere bagli olmamali, generic olmali
+
+    </script>
+</body>
+</html>
