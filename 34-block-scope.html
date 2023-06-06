@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- var function scope'a takilir, block scope'u takmaz. let ise block scope'a takilir, const'da block scope'tur -->
+
+
+    <script>
+
+        function test(){
+
+            var a = "Merhaba";
+            let b = "Dunya";
+
+
+            if(true){
+
+                var x = "Ankara";
+                let y = "Izmir";
+
+            }
+            console.log(a,b,x); //merhaba dunya ankara
+            console.log(y); // hata verir
+
+        }
+        test(); // function cagirildi
+
+
+    </script>
+</body>
+</html>
