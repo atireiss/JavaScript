@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form action=""></form>
+<!-- action, form'un nereye gonderilecegini belirler -->
+
+<input type="number" name="" id="vize" placeholder="Vize notu">
+<input type="number" name="" id="final" placeholder="Final notu">
+<button onclick="hesapla()" id="">Hesapla</button>
+<div id="sonuc"></div>
+
+<script>
+
+    function hesapla(){
+
+        const vize = document.querySelector("#vize").value;
+        const final = document.querySelector("#final").value;
+
+        // guvenlik kontrollerimizi de yapalim
+
+        if(!vize || isNaN(vize) || vize<0){
+
+            alert('Gecerli bir vize notu giriniz');
+            return;
+
+        }else if(!final || isNaN(final) || final<0){
+
+            alert("Gecerli bir final notu giriniz");
+            return;
+        }
+
+        let ortalama = Number(vize)*0.4 + Number(final)*0.6;
+        // ondalikli sayilari istemezsek tum islemi Math.floor(un icine) yazariz, Math.round() da olur
+
+        const notlar = {
+
+            vize_notu : vize, // camelCase'de yapabilirdi hoca, olabilecegini gostermek icin_kullandi
+            final_notu : final,
+            ort : ortalama
+
+        };
+
+        console.log(notlar);
+
+        document.querySelector("#sonuc").innerHTML = `Not ortalaman ${notlar.ort}`;
+
+    }
+
+
+</script>
+</body>
+</html>
