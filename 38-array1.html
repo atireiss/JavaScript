@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const kurslar = ["JavaScript", "Salesforce", "Data Science", "Python"]; // let ile yazildiginda tumden degisiklige izin verir
+
+        console.log(kurslar); // 4 elemanli bir array olarak gosterir
+        console.log(kurslar[1]); // index'te 1. elemani verir
+        console.log(kurslar[kurslar.length-1]); // son elemani almak icin length-1 kullandik
+        console.log(kurslar.length);
+
+        kurslar[0] = "React";
+        kurslar[1] = "Java";
+        console.log(kurslar); // const ile tanimlanmasina ragmen parcali olarak value'larda degisiklik yapabildik
+
+        //kurslar = ["Ali", "Veli"]; // hata verir
+        
+
+    </script>
+</body>
+</html>
