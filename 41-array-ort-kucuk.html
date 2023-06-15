@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input type="button" value="Hesapla" onclick="hesapla()">
+        
+    <script>
+
+function getAverage(arr){
+
+let avg = 0;
+
+for(let i = 0 ; i<arr.length ; i++){
+
+    avg += arr[i];
+
+}
+avg = (avg / arr.length).toFixed(2);
+
+return avg;
+}
+
+function getCount(arr, avg){
+
+let counter = 0
+
+for(let i = 0 ; i<arr.length ; i++){
+
+    if(arr[i] < avg){
+
+        counter++;
+         }
+    return counter;
+    }
+
+}
+
+function hesapla(){
+
+    const dizi = [12,56,14,67,89,33,22];
+    const ort = getAverage(dizi);
+    const sayac = getCount(ort);
+    alert(`Hesapladiginiz dizinin ortalamasi ${ort} ve ortalamadan kucuk sayi ${sayac}'tir`)
+
+
+}
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
