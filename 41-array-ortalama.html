@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="button" value="Hesapla" onclick="hesapla()"> 
+
+
+    <script>
+        //-----------------------------------
+        //A- bu jenerik fonksiyonumuz olsun. Heryerden cagirilabilsin. Ortalama hesaplasin.
+
+        function getAverage(arr){ //disardan bir tane dizi (arr) alacak ve ortalamayi bulup, degeri disari return edecek
+            let avg = 0; //toplama yapacagimiz icin ilk degeri sifir verdim
+
+            for(let i=0; i<arr.length; i++){
+                avg += arr[i]; //avg = avg + arr[i]; dizimizin elemanlarini tek tek toplayip avg icine yazdik
+            }
+            avg = (avg / arr.length).toFixed(2); //toplami (avg) dizinin eleman sayisina bolduk ki, ortalamayi bulalim
+            
+            //console.log(avg);
+            return avg;
+        }
+
+        //-----------------------------------
+        //B-Bu fonksiyon ortalamanin altinda kac tane sayi oldugunu bulan fonksiyonumuz olsun
+
+        function getCount(arr,avg){ //bu fonksiyona bir dizi (arr) ve A fonksiyonundan gelen
+            //ortalamayi (avg) parametre olarak verdik
+            let count = 0; //ortalamanin altinda kac tane eleman oldugunu sayip bu degiskene yukleyecegiz
+
+            for(let i=0; i<arr.length; i++){ //dizi elemanlarini (arr) tek tek geziyoruz
+                if(arr[i]<avg){
+                    count++;
+                }
+            }
+            return count;
+        }
+        //-----------------------------------
+        //C- Bu fonksiyonlari tetikleyecek bir fonksiyonumuz olsun.(HTML'deki hesapla())
+
+        function hesapla(){
+            const dizi = [12,56,14,67,89,33,22];
+            const ortalama = getAverage(dizi); //getAverage() dizi'yi arr adiyla alir.Bize ortalamyi gonderir
+            const kacTane = getCount(dizi,ortalama); 
+            alert(`Dizinin icinde ortalama deger olan ${ortalama} dan kucuk olan ${kacTane} deger vardir`);
+        }
+
+    </script>
+</body>
+</html>
